@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 /**
  * _strpbrk - Entry point
  * @s: input
@@ -8,15 +7,18 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
-	while (*s) {
-        const char *a = accept;
-        while (*a) {
-            if (*s == *a) {
-                return s;
-            }
-            a++;
-        }
-        s++;
-    }
-    return NULL;
+		int k;
+
+		while (*s)
+		{
+			for (k = 0; accept[k]; k++)
+			{
+			if (*s == accept[k])
+			return (s);
+			}
+		s++;
+		}
+
+	return ('\0');
 }
+
