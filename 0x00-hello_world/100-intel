@@ -1,2 +1,5 @@
-#!/bin/bash
-gcc -s -masm=intel $CFILE
+#!/usr/bin/env bash
+#A script that compile C file until assembly
+
+
+gcc -S -masm=intel "$CFILE"
