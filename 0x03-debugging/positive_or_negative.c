@@ -3,24 +3,19 @@
 #include <stdio.h>
 
 /**
- * main - entry point
+ * positive_or_negative - Determines if a number is positive, zero, or negative
+ * @i: The integer to evaluate
  *
- * Description: false or true validation
- *
- * Return: 0 (success)
+ * Description: Prints whether the given integer is
+ * positive, zero, or negative.
 */
 
-int main(void)
+void positive_or_negative(int i)
 {
-	int n;
-
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	if (n > 0)
-		printf("%i is positive\n", n);
-	else if (n == 0)
-		printf("%i is zero\n", n);
+	if (i > 0)
+		printf("%i is positive\n", i);
+	else if (i == 0)
+		printf("%i is zero\n", i);
 	else
-		printf("%i is negative\n", n);
-	return (0);
+		printf("%i is negative\n", i);
 }
